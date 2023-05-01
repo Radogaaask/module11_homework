@@ -1,0 +1,26 @@
+// Вариант 1.
+function isPrime(num) {
+    if ( num < 2 || num > 1000) return "данные неверны";
+    
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) return "не простое число";
+    }
+    return "простое число";
+  }
+  
+  console.log(isPrime());
+
+
+
+// Вариант 2. (Нашел в интернете подобный вариант, доделал под условия задания)
+function isPrime(n) {
+    if (!Number.isInteger(n) || n < 2 || n > 1000) return "данные неверны";
+
+    let k = Math.sqrt(n);
+    for (let i = 2; i <= k; i++)
+        if (n % i === 0) return "не простое число";
+
+    return "простое число";
+}
+
+console.log(isPrime());
